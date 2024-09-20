@@ -29,6 +29,7 @@ list_of_files = [                           #define files and folders that we ne
     f"{project_name}/utils/__init__.py",
     f"{project_name}/utils/main_utils.py",
     f"templates/index.html",
+    f"research/trials.ipynb",
     f"app.py",
     f"Doickerfile",
     f"requirements.txt",
