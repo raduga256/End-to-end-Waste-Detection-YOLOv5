@@ -2,23 +2,38 @@
 
 Welcome to my comprehensive guide on implementing an end-to-end Object Detection project using the powerful YOLOv5 model! 🚀
 
-In this Project, we'll take you through every step of the process, from data preparation and model training to deployment, 
+In this Project, I'll take you through every step of the process, from data preparation and model training to deployment, 
 enabling you to detect objects in images and videos with remarkable accuracy and efficiency.
 
-▬▬▬▬ Contents of this Course/  ▬▬▬▬▬
+▬▬▬▬ Contents of this Project/  ▬▬▬▬▬
+ - Introduction
+ - Project Demo
+ - Github Repository Setup
+ - Project Template Creation
+ - Requirements Installation & Project Setup
+ - Data Annotation
+ - Notebook Expriement
+ - Logging, Exception & Utils Modules
+ - Project Workflows
+ - Data Ingestion Component
+ - Data Validation Component
+ - Model Trainer Component
+ - Prediction Pipeline & User App
+ - Dockerization & AWS CICD Deployment
+ - Azure CICD Deployment
 
-00:00:00 - Introduction
-00:03:48 - Project Demo
-00:07:29 - Github Repository Setup
-00:12:27 - Project Template Creation
-00:36:31 - Requirements Installation & Project Setup
-00:45:25 - Data Annotation
-00:56:52 - Notebook Expriement
-01:28:38 - Logging, Exception & Utils Modules
-01:43:41 - Project Workflows
-01:45:41 - Data Ingestion Component
-02:09:33 - Data Validation Component
-02:25:53 - Model Trainer Component
-02:46:37 - Prediction Pipeline & User App
-02:58:19 - Dockerization & AWS CICD Deployment
-03:23:05 - Azure CICD Deployment
+## Workflows
+1. constants
+2. entity
+2. components
+3. pipelines
+4. app.py
+
+## STEPS:
+Clone the repository
+
+### STEP 01- Create a conda environment after opening the repository
+
+### STEP 02- install the requirements
+pip install -r requirements.txt
+
