@@ -25,9 +25,9 @@ enabling you to detect objects in images and videos with remarkable accuracy and
 ## Workflows
 1. constants
 2. entity
-2. components
-3. pipelines
-4. app.py
+3. components
+4. pipelines
+5. app.py
 
 ## STEPS:
 Clone the repository

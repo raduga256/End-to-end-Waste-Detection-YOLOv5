@@ -36,7 +36,7 @@ def write_yaml_file(file_path: str, content: object, replace: bool = False) -> N
     except Exception as e:
         raise AppException(e, sys)
     
-# chnage jpeg images to base64 bytes images
+# change jpeg images to base64 strings for easier laoding
 def decodeImage(imgstring, fileName):
     imgdata = base64.b64decode(imgstring)
     with open("./data/" + fileName, 'wb') as f:
