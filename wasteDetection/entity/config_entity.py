@@ -26,7 +26,7 @@ class DataIngestionConfig:
     )
     
     # create path to data_ingestion/data directory to save downloads to
-    feature_store_file_path : str = os.path.join(training_pipeline_config.artifacts_dir, DATA_INGESTION_FEATURE_STORE_DIR)
+    feature_store_file_path : str = os.path.join(data_ingestion_dir, DATA_INGESTION_FEATURE_STORE_DIR)
     
     #gdrive file sharing url
     data_download_url: str = DATA_DOWNLOAD_URL

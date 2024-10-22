@@ -5,8 +5,8 @@ logging.info("Welcome to Paul's custom log")
 
 # test command:: python app.py
 
-from wasteDetection.pipeline.training_pipeline import TrainingPipeline
+from wasteDetection.pipeline.training_pipeline import TrainPipeline
 
 # Create a new TrainingPipeline instance
-obj = TrainingPipeline()
+obj = TrainPipeline()
 obj.run_pipeline()

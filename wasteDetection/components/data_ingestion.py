@@ -9,7 +9,7 @@ from wasteDetection.exception import AppException
 from wasteDetection.entity.config_entity import DataIngestionConfig
 from wasteDetection.entity.artifacts_entity import DataIngestionArtifact
 
-#
+# This class handles data_ingestion related actions 1. download data 2. extract data to a file folder
 class DataIngestion:
     def __init__(self, data_ingestion_config: DataIngestionConfig = DataIngestionConfig()):
         try:
@@ -29,8 +29,8 @@ class DataIngestion:
             #create directory if it doesn't exist for artifacts/dataingestion
             os.makedirs(zip_download_dir, exist_ok=True)
             
-            # provide new name for the download file
-            data_file_name = "waste-data.zip"
+            # provide new name and path for the downloaded data zip file
+            data_file_name = "waste_data.zip"
             zip_file_path = os.path.join(zip_download_dir, data_file_name)
             
             
@@ -42,7 +42,10 @@ class DataIngestion:
             prefix_download_url = f"https://drive.google.com/uc?id={file_id}&export=download"
 
             # Download the file into a local dir  # Change this to your desired file name and extension
-            gdown.download(prefix_download_url, zip_download_dir)
+            gdown.download(prefix_download_url, zip_file_path)
+            
+            #Logging what is happening
+            logging.info(f"Downloaded data from online source: {dataset_url} into file {zip_file_path}")
             
             return zip_file_path
             
@@ -66,13 +69,16 @@ class DataIngestion:
                 zip_ref.extractall(feature_store_path)
             logging.info(f"Extracting zip file : {zip_file_path} into {feature_store_path}")
             
-            #return feature_store_path
+            return feature_store_path
             
         except Exception as e:
             raise AppException(e, sys)
-        
+    
+    
+    ##################################    
+    
     # Load the data from **feature_store** into the data lake
-    def initiate_data_feature_store(self) -> DataIngestionArtifact:
+    def initiate_data_ingestion(self) -> DataIngestionArtifact:
         
         logging.info(f"Entered intiate_data_ingestion method of DataIngestion class")
         
