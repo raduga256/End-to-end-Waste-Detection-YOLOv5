@@ -30,3 +30,18 @@ class DataIngestionConfig:
     
     #gdrive file sharing url
     data_download_url: str = DATA_DOWNLOAD_URL
+
+
+# DATA Validation Pipeline
+@dataclass
+class DataValidationConfig:
+    # create a data validation folder path
+    data_validation_dir:str = os.path.join(
+        training_pipeline_config.artifacts_dir, DATA_VALIDATION_DIR_NAME)
+    
+    valid_status_file_dir:str = os.path.join(
+        data_validation_dir, DATA_VALIDATION_STATUS_FILE)
+    
+    # Dependency files list for validation pipeline
+    required_file_list = DATA_VALIDATION_ALL_REQUIRED_FILES
+    
