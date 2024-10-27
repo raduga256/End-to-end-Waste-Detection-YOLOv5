@@ -34,7 +34,7 @@ MODEL_TRAINER_DIR_NAME: str = "model_trainer"
 
 MODEL_TRAINER_PRETRAINED_WEIGHT_NAME: str = "yolov5s.pt"    #Name of yolo model to be downloaded
 
-MODEL_TRAINER_NO_EPOCHS: int = 1
+MODEL_TRAINER_NO_EPOCHS: int = 30 # Number of epochs to train the model. set to 1-100
 
 MODEL_TRAINER_BATCH_SIZE: int = 16
 
