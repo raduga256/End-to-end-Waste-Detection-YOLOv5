@@ -14,4 +14,7 @@ class DataValidationArtifact:
     validation_status:bool
     
 
-    
+# Define the Model Trainer artifact return type
+@dataclass
+class ModelTrainerArtifact:
+    trained_model_file_path:str   

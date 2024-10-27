@@ -71,7 +71,10 @@ class DataValidation:
             logging.info("Exited initiate_data_validation method of DataValidation class")
             logging.info(f"Data validation artifact: {data_validation_artifact}")
 
-            # if validation is successful, copy the data zip file to the current directory i.e src root directory for easy path manipulation
+            
+            
+        ###### COPY data folder into src root directory
+            # If validation is successful, copy the data zip file to the current directory i.e src root directory for easy path manipulation
             if status:
                 shutil.copy(self.data_ingestion_artifact.data_zip_file_path, os.getcwd())
 
